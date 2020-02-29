@@ -9,6 +9,7 @@ export default class Main extends Component {
 		products: [],
 		productInfo: {},
 		page: 1,
+		errorApi: null,
 	};
 
 	componentDidMount() {
@@ -16,28 +17,28 @@ export default class Main extends Component {
 	}
 
 	loadProducts = async (page = 1) => {
-		const response = await api.get(`/products?page=${page}`);
-		const { docs, ...productInfo } = response.data;
-		this.setState({ products: docs, productInfo, page });
+		try {
+			const response = await api.get(`/products?page=${page}`);
+			const { docs, ...productInfo } = response.data;
+			this.setState({ products: docs, productInfo, page });
+		} catch (err) {
+			this.setState({ errorApi: true });
+		}
 	};
 
-	prevPage = () => {
-		const { page } = this.state;
-		if (page === 1) return;
-		const pageNumber = page - 1;
-		this.loadProducts(pageNumber);
-	};
+	renderError() {
+		return (
+			<div className='errorApi'>
+				<strong>
+					Não foi possível carregar os dados. Tente novamente mais
+					tarde!
+				</strong>
+			</div>
+		);
+	}
 
-	nextPage = () => {
-		const { page, productInfo } = this.state;
-		if (page === productInfo.pages) return;
-		const pageNumber = page + 1;
-		this.loadProducts(pageNumber);
-	};
-
-	render() {
+	renderProducts = () => {
 		const { products, page, productInfo } = this.state;
-
 		return (
 			<div className='product-list'>
 				{products.map(product => (
@@ -58,6 +59,28 @@ export default class Main extends Component {
 					</button>
 				</div>
 			</div>
+		);
+	};
+
+	prevPage = () => {
+		const { page } = this.state;
+		if (page === 1) return;
+		const pageNumber = page - 1;
+		this.loadProducts(pageNumber);
+	};
+
+	nextPage = () => {
+		const { page, productInfo } = this.state;
+		if (page === productInfo.pages) return;
+		const pageNumber = page + 1;
+		this.loadProducts(pageNumber);
+	};
+
+	render() {
+		const { errorApi } = this.state;
+
+		return (
+			<div>{errorApi ? this.renderError() : this.renderProducts()}</div>
 		);
 	}
 }
