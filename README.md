@@ -4,16 +4,15 @@
 ## Criação: 19 de fevereiro de 2020
 ## Prática : @reluviari
 
+## Link to App
+You can visit the app by clicking this link: [Access App](https://reluviaris-huntweb-react.herokuapp.com/).
+
 ![Rocketseat](/images/logo-rocketseat.png)
 ![Git](/images/logo-git.png)
 ![GitHub](/images/logo-github.png)
 ![React JS](/images/logo-reactjs.jpg)
 ![HTML-CSS-JS](/images/logo-html-css-js.jpeg)
 ![VSCode](/images/logo-VSCode.png)
-
-## Link to App
-
-You can visit the app by clicking this link: [Access App](https://reluviaris-huntweb-react.herokuapp.com/).
 
 ### Aula 1 : O que é ReactJS ?
 
