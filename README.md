@@ -1,4 +1,3 @@
-
 # Recycling learning with ReactJS
 
 ## Criação: 19 de fevereiro de 2020
@@ -7,12 +6,13 @@
 ## Link to App
 You can visit the app by clicking this link: [Access App](https://reluviaris-huntweb-react.herokuapp.com/).
 
-![Rocketseat](/images/logo-rocketseat.png)
-![Git](/images/logo-git.png)
-![GitHub](/images/logo-github.png)
+![Javascript](/images/logo-javascript-es6.png)
+![VSCode](/images/logo-VSCode.png)
 ![React JS](/images/logo-reactjs.jpg)
 ![HTML-CSS-JS](/images/logo-html-css-js.jpeg)
-![VSCode](/images/logo-VSCode.png)
+![Git](/images/logo-git.png)
+![GitHub](/images/logo-github.png)
+![Rocketseat](/images/logo-rocketseat.png)
 
 ### Aula 1 : O que é ReactJS ?
 
