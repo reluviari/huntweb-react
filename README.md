@@ -4,7 +4,7 @@
 ## Criação: 19 de fevereiro de 2020
 ## Prática : @reluviari
 
-## Link to App 
+## Link to App
 You can visit the app by clicking this link: [Access App](https://reluviaris-huntweb-react.herokuapp.com/).
 
 ![Rocketseat](/images/logo-rocketseat.png)
