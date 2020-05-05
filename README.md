@@ -78,6 +78,3 @@ Encerramos o projeto tendo realizado:
 - Ciclos de vida
 - Utilização de API
 - Estado
-
-:. Do curso `ReactJS` da Station Rocketseat - Starter. <br>
-Por Diego Fernandes : https://station.rocketseat.com.br/courses/starter
